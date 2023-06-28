@@ -1,10 +1,13 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
-const Horoscope = ({ sign, horoscope }) => {
+const Horoscope = () => {
+  const { zodiacSign } = useParams();
+
   return (
     <div>
-      <h2>{sign.name} Horoscope</h2>
-      <p>{horoscope}</p>
+      <h2>Horoscope</h2>
+      <p>{zodiacSign}</p>
     </div>
   );
 };
