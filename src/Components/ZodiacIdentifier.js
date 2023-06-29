@@ -1,4 +1,7 @@
-function getZodiacSign(dateOfBirth) {
+import React from "react";
+import zodiacSigns from "../Data/ZodiacSigns";
+
+function ZodiacIdentifier({ dateOfBirth, setZodiac }) {
   const birthDate = new Date(dateOfBirth);
   const month = birthDate.getMonth() + 1;
   const day = birthDate.getDate();
@@ -19,7 +22,7 @@ function getZodiacSign(dateOfBirth) {
     }
   });
 
-  return zodiacSign;
+  return <p>{zodiacSign}</p>;
 }
 
-export default getZodiacSign;
+export default ZodiacIdentifier;
