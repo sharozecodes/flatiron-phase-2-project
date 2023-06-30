@@ -3,11 +3,14 @@ import { useNavigate } from "react-router-dom";
 //import Button from "react-bootstrap/Button";
 import "../App.css";
 const Home = () => {
-  const [zodiac, setZodiac] = useState("Apple");
+  const [zodiac, setZodiac] = useState("Taurus");
+  // const [name, setName] = useState("");
+  // const [dateOfBirth, setDateOfBirth] = useState("");
   const navigate = useNavigate();
   return (
     <>
       <h2>Welcome to Zodiac Horoscope Explorer</h2>
+
       <button onClick={() => navigate(`/${zodiac}`)}>Horoscope</button>
       <button onClick={() => navigate("/userlist")}>USERLIST</button>
       {/* <Button as="a" variant="primary">
