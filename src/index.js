@@ -5,6 +5,7 @@ import "./index.css";
 import Home from "./Pages/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Horoscope from "./Components/Horoscope";
+import UserList from "./Components/UserList";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/:zodiacSign",
     element: <Horoscope />,
+  },
+  {
+    path: "/userlist",
+    element: <UserList />,
   },
 ]);
 
