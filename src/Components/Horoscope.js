@@ -14,9 +14,14 @@ const Horoscope = () => {
       });
   }, []);
 
+  const favoriteFood = zodiacSigns.find(
+    (zodiac) => zodiac.name === zodiacSign
+  )?.favoriteFood;
+
   return (
     <div>
       <h2>{zodiacSign}</h2>
+      <h1>{favoriteFood}</h1>
     </div>
   );
 };
