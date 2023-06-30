@@ -1,5 +1,4 @@
 import React from "react";
-import zodiacSigns from "../Data/ZodiacSigns";
 
 function ZodiacIdentifier({ dateOfBirth, setZodiac }) {
   const birthDate = new Date(dateOfBirth);
