@@ -18,8 +18,6 @@ const Home = () => {
         setDateOfBirth={setDateOfBirth}
       />
 
-      <button onClick={() => navigate(`/${zodiac}`)}>Horoscope</button>
-      <button onClick={() => navigate("/userlist")}>USERLIST</button>
       {/* <Button as="a" variant="primary">
         Button as link
       </Button>

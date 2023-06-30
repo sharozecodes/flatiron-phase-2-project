@@ -1,6 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const FormComponent = ({ name, dateOfBirth, setName, setDateOfBirth }) => {
+  const navigate = useNavigate();
+  const [zodiacSigns, setZodiacSigns] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:4000/zodiacs")
+      .then((response) => response.json())
+      .then((data) => {
+        setZodiacSigns(data);
+        console.log(data);
+      });
+  }, []);
+
+  const getZodiacSign = (date) => {
+    const birthDate = new Date(date);
+    const month = birthDate.getMonth() + 1;
+    const day = birthDate.getDate();
+
+    let zodiacSign = null;
+
+    zodiacSigns.forEach((sign) => {
+      const startMonth = sign.startDate.month;
+      const startDay = sign.startDate.day;
+      const endMonth = sign.endDate.month;
+      const endDay = sign.endDate.day;
+
+      if (
+        (month === startMonth && day >= startDay) ||
+        (month === endMonth && day <= endDay)
+      ) {
+        zodiacSign = sign.name;
+      }
+    });
+
+    return zodiacSign;
+  };
+
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
@@ -15,7 +51,11 @@ const FormComponent = ({ name, dateOfBirth, setName, setDateOfBirth }) => {
     // Perform any desired actions with the submitted data
     console.log("Name:", name);
     console.log("Date of Birth:", dateOfBirth);
+    //Detect Sign based of the dob
+    const zodiac = getZodiacSign(dateOfBirth);
+    //redirect the user to a page with sign in url
 
+    navigate(`/${zodiac}`);
     // Clear the form fields
     setName("");
     setDateOfBirth("");
