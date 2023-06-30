@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import getZodiacSign from "../Components/getZodiacSign";
-
+import "../App.css";
 const Home = () => {
-  const [zodiac, setZodiac] = useState("");
-  setZodiac("Apple");
+  const [zodiac, setZodiac] = useState("Apple");
   const navigate = useNavigate();
   return (
     <>
