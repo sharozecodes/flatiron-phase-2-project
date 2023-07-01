@@ -57,29 +57,14 @@ const FormComponent = ({ name, dateOfBirth, setName, setDateOfBirth }) => {
       },
       body: JSON.stringify(postData),
     });
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     console.log("POST request succeeded with response:", data);
-    //     // Handle the response data
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error making POST request:", error);
-    //     // Handle the error
-    //   });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Perform any desired actions with the submitted data
-    //  console.log("Name:", name);
-    //  console.log("Date of Birth:", dateOfBirth);
-    //Detect Sign based of the dob
     const zodiac = getZodiacSign(dateOfBirth);
-    //redirect the user to a page with sign in url
 
     navigate(`/${zodiac}`);
-    // Clear the form fields
     saveUser(name, dateOfBirth);
     setName("");
     setDateOfBirth("");

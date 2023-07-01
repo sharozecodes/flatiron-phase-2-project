@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-//import { useParams } from "react-router-dom";
 
 const UserList = () => {
   const navigate = useNavigate();
-  //const { zodiacSign } = useParams();
   const [users, setUsers] = useState([]);
 
   const userFetcher = async () => {
