@@ -21,8 +21,8 @@ const Horoscope = () => {
 
   return (
     <div>
-      <h2>{zodiacSign}</h2>
-      <h1>{favoriteFood}</h1>
+      <h2>Your Zodiac is {zodiacSign}</h2>
+      <h1>and we know you like {favoriteFood}</h1>
       <button onClick={() => navigate("/")}>Back</button>
     </div>
   );
