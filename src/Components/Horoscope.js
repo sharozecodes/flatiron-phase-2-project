@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-function Horoscope({ zodiacSign }) {
+function Horoscope() {
   return <div>Horoscope</div>;
 }
 

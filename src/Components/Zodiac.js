@@ -6,6 +6,7 @@ const Zodiac = () => {
   const navigate = useNavigate();
   const { zodiacSign } = useParams();
   const [zodiacSigns, setZodiacSigns] = useState([]);
+  const [day, setDay] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:4000/zodiacs")
@@ -23,6 +24,8 @@ const Zodiac = () => {
     (zodiac) => zodiac.name === zodiacSign
   )?.description;
 
+  const myProp = { day, setDay };
+
   return (
     <div>
       <img id="zodiac-images" src={image} alt={zodiacSign} width="300" />
@@ -30,6 +33,7 @@ const Zodiac = () => {
       <h2>and we know you like {favoriteFood}</h2>
       <p>{traits}</p>
       <button onClick={() => navigate("/")}>Back</button>
+      <button onClick={() => navigate(`/${zodiacSign}/horoscope`)}>Test</button>
     </div>
   );
 };
