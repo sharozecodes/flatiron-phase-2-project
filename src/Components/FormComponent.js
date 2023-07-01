@@ -45,6 +45,30 @@ const FormComponent = ({ name, dateOfBirth, setName, setDateOfBirth }) => {
     setDateOfBirth(e.target.value);
   };
 
+  const saveUser = (userName, userDateOfBirth) => {
+    const postData = {
+      name: userName,
+      dateOfBirth: userDateOfBirth,
+    };
+
+    fetch("http://localhost:4000/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(postData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("POST request succeeded with response:", data);
+        // Handle the response data
+      })
+      .catch((error) => {
+        console.error("Error making POST request:", error);
+        // Handle the error
+      });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -57,6 +81,7 @@ const FormComponent = ({ name, dateOfBirth, setName, setDateOfBirth }) => {
 
     navigate(`/${zodiac}`);
     // Clear the form fields
+    saveUser(name, dateOfBirth);
     setName("");
     setDateOfBirth("");
   };
