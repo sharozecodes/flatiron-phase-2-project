@@ -39,7 +39,7 @@ const UserList = () => {
   return (
     <div>
       <h2>USER LIST</h2>
-      <p>{userElements}</p>
+      <>{userElements}</>
       <button onClick={() => navigate("/")}>Back</button>
       <button onClick={() => handleDelete()}>Clear</button>
     </div>

@@ -27,8 +27,11 @@ const Zodiac = () => {
     <div>
       <img id="zodiac-images" src={image} alt={zodiacSign} width="300" />
       <h1>Your Zodiac is {zodiacSign}</h1>
-      <h2>and we know you like {favoriteFood}</h2>
-      <p>{traits}</p>
+      <p style={{ fontSize: "21px" }}>{traits}</p>
+      <h2>
+        Food most commonly like by {zodiacSign}: {favoriteFood}
+      </h2>
+
       <button onClick={() => navigate("/")}>Back</button>
       <button onClick={() => navigate(`/${zodiacSign}/horoscope`)}>
         Check Horoscope

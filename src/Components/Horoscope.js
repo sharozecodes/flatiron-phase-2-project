@@ -20,7 +20,7 @@ function Horoscope() {
   return (
     <div>
       <h2>{zodiacSign} Today</h2>
-      <p>{horoscope}</p>
+      <p style={{ fontSize: "18px" }}>{horoscope}</p>
       <button onClick={() => navigate(`/${zodiacSign}`)}>Back</button>
     </div>
   );
