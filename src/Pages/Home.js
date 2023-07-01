@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import UserList from "../Components/UserList";
 //import Button from "react-bootstrap/Button";
 import "../App.css";
 import FormComponent from "../Components/FormComponent";
@@ -17,6 +18,7 @@ const Home = () => {
         setName={setName}
         setDateOfBirth={setDateOfBirth}
       />
+      <button onClick={() => navigate("/userlist")}>Users</button>
 
       {/* <Button as="a" variant="primary">
         Button as link

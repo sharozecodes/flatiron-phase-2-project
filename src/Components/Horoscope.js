@@ -10,7 +10,6 @@ const Horoscope = () => {
       .then((response) => response.json())
       .then((data) => {
         setZodiacSigns(data);
-        console.log(data);
       });
   }, []);
 
