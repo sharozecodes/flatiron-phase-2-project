@@ -4,3 +4,9 @@ body {
   background-size: cover;
   color: white;
 }
+
+#zodiac-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
