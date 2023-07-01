@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-const Horoscope = ({ name }) => {
+const Horoscope = () => {
   const navigate = useNavigate();
   const { zodiacSign } = useParams();
   const [zodiacSigns, setZodiacSigns] = useState([]);
@@ -18,7 +18,6 @@ const Horoscope = ({ name }) => {
   const favoriteFood = zodiacSigns.find(
     (zodiac) => zodiac.name === zodiacSign
   )?.favoriteFood;
-  console.log(name);
 
   return (
     <div>

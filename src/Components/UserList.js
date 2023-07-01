@@ -23,8 +23,6 @@ const UserList = () => {
     </React.Fragment>
   ));
 
-  console.log(users);
-
   return (
     <div>
       <h2>USER LIST</h2>
