@@ -18,9 +18,11 @@ const Horoscope = () => {
   const favoriteFood = zodiacSigns.find(
     (zodiac) => zodiac.name === zodiacSign
   )?.favoriteFood;
+  const image = zodiacSigns.find((zodiac) => zodiac.name === zodiacSign)?.image;
 
   return (
     <div>
+      <img src={image} alt={zodiacSign} width="300" />
       <h2>Your Zodiac is {zodiacSign}</h2>
       <h1>and we know you like {favoriteFood}</h1>
       <button onClick={() => navigate("/")}>Back</button>
