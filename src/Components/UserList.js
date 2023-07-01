@@ -16,7 +16,7 @@ const UserList = () => {
     userFetcher();
   }, []);
 
-  const userElements = users.map((user) => (
+  const userElements = users.slice(-5).map((user) => (
     <React.Fragment key={user.id}>
       <p>{user.name}</p>
       <p>{user.dateOfBirth}</p>
