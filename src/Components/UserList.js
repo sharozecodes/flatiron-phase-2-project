@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+//import ClearUser from "./ClearUser";
 //import { useParams } from "react-router-dom";
 
 const UserList = () => {
@@ -23,11 +24,27 @@ const UserList = () => {
     </React.Fragment>
   ));
 
+  const handleDelete = () => {
+    fetch("http://localhost:4000/users")
+      .then((response) => response.json())
+      .then((data) => {
+        const userIds = data.map((user) => user.id);
+
+        userIds.forEach((id) => {
+          fetch(`http://localhost:4000/users/${id}`, {
+            method: "DELETE",
+          });
+        });
+      });
+    setUsers([]);
+  };
+
   return (
     <div>
       <h2>USER LIST</h2>
       <p>{userElements}</p>
       <button onClick={() => navigate("/")}>Back</button>
+      <button onClick={() => handleDelete()}>Clear</button>
     </div>
   );
 };
