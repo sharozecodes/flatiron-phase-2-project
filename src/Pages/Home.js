@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../App.css";
+import "../index.css";
 import FormComponent from "../Components/FormComponent";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Button } from "react-bootstrap";
 const Home = () => {
   const [zodiac, setZodiac] = useState("Taurus");
   const [name, setName] = useState("");
@@ -16,7 +18,7 @@ const Home = () => {
         setName={setName}
         setDateOfBirth={setDateOfBirth}
       />
-      <button onClick={() => navigate("/userlist")}>Users</button>
+      <Button onClick={() => navigate("/userlist")}>Users</Button>
     </>
   );
 };
