@@ -17,8 +17,9 @@ const UserList = () => {
 
   const userElements = users.slice(-5).map((user) => (
     <React.Fragment key={user.id}>
-      <p>{user.name}</p>
-      <p>{user.dateOfBirth}</p>
+      <p>
+        {user.name} , {user.zodiac}
+      </p>
     </React.Fragment>
   ));
 

@@ -46,10 +46,11 @@ const FormComponent = ({ name, dateOfBirth, setName, setDateOfBirth }) => {
     setDateOfBirth(e.target.value);
   };
 
-  const saveUser = (userName, userDateOfBirth) => {
+  const saveUser = (userName, userDateOfBirth, sign) => {
     const postData = {
       name: userName,
       dateOfBirth: userDateOfBirth,
+      zodiac: sign,
     };
 
     fetch("http://localhost:4000/users", {
@@ -67,7 +68,7 @@ const FormComponent = ({ name, dateOfBirth, setName, setDateOfBirth }) => {
     const zodiac = getZodiacSign(dateOfBirth);
 
     navigate(`/${zodiac}`);
-    saveUser(name, dateOfBirth);
+    saveUser(name, dateOfBirth, zodiac);
     setName("");
     setDateOfBirth("");
   };
