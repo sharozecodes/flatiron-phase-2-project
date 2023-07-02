@@ -22,4 +22,9 @@ h2 {
 
 #home-div {
   text-align: center;
+  min-height: 70rem;
+}
+
+#form {
+  margin-bottom: 10px;
 }

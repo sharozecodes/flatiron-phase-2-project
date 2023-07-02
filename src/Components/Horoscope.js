@@ -22,7 +22,11 @@ function Horoscope() {
     <div className="text-white">
       <h2>{zodiacSign} Today</h2>
       <p style={{ fontSize: "18px" }}>{horoscope}</p>
-      <Button variant="dark" onClick={() => navigate(`/${zodiacSign}`)}>
+      <Button
+        className="button-class"
+        variant="dark"
+        onClick={() => navigate(`/${zodiacSign}`)}
+      >
         Back
       </Button>
     </div>

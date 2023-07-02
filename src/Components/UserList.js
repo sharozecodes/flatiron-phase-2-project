@@ -40,10 +40,18 @@ const UserList = () => {
     <div className="text-white">
       <h2>USER LIST</h2>
       <>{userElements}</>
-      <Button variant="dark" onClick={() => navigate("/")}>
+      <Button
+        className="button-class"
+        variant="dark"
+        onClick={() => navigate("/")}
+      >
         Back
       </Button>
-      <Button variant="dark" onClick={() => handleDelete()}>
+      <Button
+        className="button-class"
+        variant="dark"
+        onClick={() => handleDelete()}
+      >
         Clear
       </Button>
     </div>

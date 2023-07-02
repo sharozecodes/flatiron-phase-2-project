@@ -26,6 +26,7 @@ const Home = () => {
         setDateOfBirth={setDateOfBirth}
       />
       <Button
+        className="button-class"
         variant="dark"
         className="center"
         onClick={() => navigate("/userlist")}

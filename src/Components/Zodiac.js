@@ -33,10 +33,15 @@ const Zodiac = () => {
         Food most commonly like by {zodiacSign}: {favoriteFood}
       </h2>
 
-      <Button variant="dark" onClick={() => navigate("/")}>
+      <Button
+        className="button-class"
+        variant="dark"
+        onClick={() => navigate("/")}
+      >
         Back
       </Button>
       <Button
+        className="button-class"
         variant="dark"
         onClick={() => navigate(`/${zodiacSign}/horoscope`)}
       >

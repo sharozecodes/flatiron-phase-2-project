@@ -74,7 +74,7 @@ const FormComponent = ({ name, dateOfBirth, setName, setDateOfBirth }) => {
   };
 
   return (
-    <div className="align-items-center">
+    <div id="form">
       <h2 className="text-white">User Information</h2>
       <form className="text-white" onSubmit={handleSubmit}>
         <div>
