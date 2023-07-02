@@ -11,11 +11,9 @@ body {
   text-align: center;
 }
 
-#zodiac-images {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/* #zodiac-images {
+  text-align: center;
+} */
 
 h2 {
   color: white;
@@ -30,7 +28,8 @@ h2 {
   margin-bottom: 10px;
 }
 
-#horoscope {
+#horoscope #zodiac {
+  margin: 15rem 10rem;
   font-size: 18px;
   text-align: center;
   color: white;
