@@ -24,14 +24,14 @@ function Horoscope() {
       <p>{horoscope}</p>
       <Button
         className="button-class"
-        variant="dark"
+        variant="light"
         onClick={() => navigate(`/${zodiacSign}`)}
       >
         Back
       </Button>
       <Button
         className="button-class"
-        variant="dark"
+        variant="light"
         onClick={() => navigate("/")}
       >
         Home

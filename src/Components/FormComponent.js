@@ -99,7 +99,7 @@ const FormComponent = ({ name, dateOfBirth, setName, setDateOfBirth }) => {
             />
           </label>
         </div>
-        <Button className="form-element" variant="dark" type="submit">
+        <Button className="form-element" variant="light" type="submit">
           Submit
         </Button>
       </form>

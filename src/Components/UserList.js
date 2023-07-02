@@ -44,14 +44,14 @@ const UserList = () => {
       <>{userElements}</>
       <Button
         className="button-class"
-        variant="dark"
+        variant="light"
         onClick={() => navigate("/")}
       >
         Back
       </Button>
       <Button
         className="button-class"
-        variant="dark"
+        variant="light"
         onClick={() => handleDelete()}
       >
         Clear

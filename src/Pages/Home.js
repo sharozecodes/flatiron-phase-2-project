@@ -25,7 +25,7 @@ const Home = () => {
         setName={setName}
         setDateOfBirth={setDateOfBirth}
       />
-      <Button variant="dark" onClick={() => navigate("/userlist")}>
+      <Button variant="light" onClick={() => navigate("/userlist")}>
         Users
       </Button>
     </div>

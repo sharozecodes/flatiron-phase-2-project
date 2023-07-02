@@ -30,19 +30,19 @@ const Zodiac = () => {
       <h1>Your Zodiac is {zodiacSign}</h1>
       <p style={{ fontSize: "21px" }}>{traits}</p>
       <h2>
-        Food most commonly like by {zodiacSign}: {favoriteFood}
+        Food most commonly liked by {zodiacSign}: {favoriteFood}
       </h2>
 
       <Button
         className="button-class"
-        variant="dark"
+        variant="light"
         onClick={() => navigate("/")}
       >
         Back
       </Button>
       <Button
         className="button-class"
-        variant="dark"
+        variant="light"
         onClick={() => navigate(`/${zodiacSign}/horoscope`)}
       >
         Check Horoscope
