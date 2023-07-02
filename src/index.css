@@ -3,11 +3,15 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: black;
-  color: white;
+  color: black;
 }
 
 #zodiac-images {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+h2 {
+  color: white;
 }

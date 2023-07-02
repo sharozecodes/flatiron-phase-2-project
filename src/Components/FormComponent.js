@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { Button, Stack } from "react-bootstrap";
+
 const FormComponent = ({ name, dateOfBirth, setName, setDateOfBirth }) => {
   const navigate = useNavigate();
   const [zodiacSigns, setZodiacSigns] = useState([]);
@@ -71,9 +73,9 @@ const FormComponent = ({ name, dateOfBirth, setName, setDateOfBirth }) => {
   };
 
   return (
-    <div>
-      <h2>User Information</h2>
-      <form onSubmit={handleSubmit}>
+    <div className="align-items-center">
+      <h2 className="text-white">User Information</h2>
+      <form className="text-white" onSubmit={handleSubmit}>
         <div>
           <label>
             Name:
@@ -96,7 +98,9 @@ const FormComponent = ({ name, dateOfBirth, setName, setDateOfBirth }) => {
             />
           </label>
         </div>
-        <button type="submit">Submit</button>
+        <Button variant="dark" type="submit">
+          Submit
+        </Button>
       </form>
     </div>
   );

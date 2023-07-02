@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 const UserList = () => {
   const navigate = useNavigate();
@@ -37,11 +38,15 @@ const UserList = () => {
   };
 
   return (
-    <div>
+    <div className="text-white">
       <h2>USER LIST</h2>
       <>{userElements}</>
-      <button onClick={() => navigate("/")}>Back</button>
-      <button onClick={() => handleDelete()}>Clear</button>
+      <Button variant="dark" onClick={() => navigate("/")}>
+        Back
+      </Button>
+      <Button variant="dark" onClick={() => handleDelete()}>
+        Clear
+      </Button>
     </div>
   );
 };

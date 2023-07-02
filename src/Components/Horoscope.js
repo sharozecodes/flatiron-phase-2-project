@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 function Horoscope() {
   const navigate = useNavigate();
@@ -18,10 +19,12 @@ function Horoscope() {
   }, []);
 
   return (
-    <div>
+    <div className="text-white">
       <h2>{zodiacSign} Today</h2>
       <p style={{ fontSize: "18px" }}>{horoscope}</p>
-      <button onClick={() => navigate(`/${zodiacSign}`)}>Back</button>
+      <Button variant="dark" onClick={() => navigate(`/${zodiacSign}`)}>
+        Back
+      </Button>
     </div>
   );
 }

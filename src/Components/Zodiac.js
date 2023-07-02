@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 const Zodiac = () => {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ const Zodiac = () => {
   )?.description;
 
   return (
-    <div>
+    <div className="text-white">
       <img id="zodiac-images" src={image} alt={zodiacSign} width="300" />
       <h1>Your Zodiac is {zodiacSign}</h1>
       <p style={{ fontSize: "21px" }}>{traits}</p>
@@ -32,10 +33,15 @@ const Zodiac = () => {
         Food most commonly like by {zodiacSign}: {favoriteFood}
       </h2>
 
-      <button onClick={() => navigate("/")}>Back</button>
-      <button onClick={() => navigate(`/${zodiacSign}/horoscope`)}>
+      <Button variant="dark" onClick={() => navigate("/")}>
+        Back
+      </Button>
+      <Button
+        variant="dark"
+        onClick={() => navigate(`/${zodiacSign}/horoscope`)}
+      >
         Check Horoscope
-      </button>
+      </Button>
     </div>
   );
 };
