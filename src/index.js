@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import Home from "./Pages/Home";
+//import "./index.css";
+import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Zodiac from "./Components/Zodiac";
 import UserList from "./Components/UserList";
@@ -10,7 +10,7 @@ import Horoscope from "./Components/Horoscope";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <App />,
   },
   {
     path: "/:zodiacSign",

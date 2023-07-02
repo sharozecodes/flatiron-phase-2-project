@@ -10,9 +10,9 @@ const Home = () => {
   const [dateOfBirth, setDateOfBirth] = useState("");
   const navigate = useNavigate();
   return (
-    <div>
+    <div id="home-div">
       <img
-        class="img-fluid rounded-circle"
+        className="img-fluid rounded-circle"
         src="https://facts.net/wp-content/uploads/2022/01/Zodiac-signs-inside-of-horoscope-circle.jpg"
         alt="Zodiac Signs"
       />

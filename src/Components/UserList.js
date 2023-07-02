@@ -16,11 +16,9 @@ const UserList = () => {
   }, []);
 
   const userElements = users.slice(-5).map((user) => (
-    <React.Fragment key={user.id}>
-      <p>
-        {user.name} , {user.zodiac}
-      </p>
-    </React.Fragment>
+    <p key={user.id}>
+      {user.name} , {user.zodiac}
+    </p>
   ));
 
   const handleDelete = () => {
