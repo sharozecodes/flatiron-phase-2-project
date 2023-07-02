@@ -77,7 +77,7 @@ const FormComponent = ({ name, dateOfBirth, setName, setDateOfBirth }) => {
     <div id="form">
       <h2 className="text-white">User Information</h2>
       <form className="text-white" onSubmit={handleSubmit}>
-        <div>
+        <div className="form-element">
           <label>
             Name:
             <input
@@ -88,7 +88,7 @@ const FormComponent = ({ name, dateOfBirth, setName, setDateOfBirth }) => {
             />
           </label>
         </div>
-        <div>
+        <div className="form-element">
           <label>
             Date of Birth:
             <input
@@ -99,7 +99,7 @@ const FormComponent = ({ name, dateOfBirth, setName, setDateOfBirth }) => {
             />
           </label>
         </div>
-        <Button variant="dark" type="submit">
+        <Button className="form-element" variant="dark" type="submit">
           Submit
         </Button>
       </form>

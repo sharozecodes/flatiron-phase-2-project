@@ -11,9 +11,9 @@ body {
   text-align: center;
 }
 
-/* #zodiac-images {
-  text-align: center;
-} */
+.button-class {
+  margin-right: 20px;
+}
 
 h2 {
   color: white;
@@ -24,13 +24,21 @@ h2 {
   min-height: 70rem;
 }
 
-#form {
+img {
+  margin-bottom: 40px;
+}
+
+.form-element {
   margin-bottom: 10px;
 }
 
-#horoscope #zodiac {
+#horoscope {
   margin: 15rem 10rem;
   font-size: 18px;
   text-align: center;
   color: white;
+}
+
+#zodiac {
+  margin: 5rem 10rem;
 }

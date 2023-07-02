@@ -25,7 +25,7 @@ const Zodiac = () => {
   )?.description;
 
   return (
-    <div className="text-white text-center">
+    <div id="zodiac" className="text-white text-center">
       <img src={image} alt={zodiacSign} width="300" />
       <h1>Your Zodiac is {zodiacSign}</h1>
       <p style={{ fontSize: "21px" }}>{traits}</p>

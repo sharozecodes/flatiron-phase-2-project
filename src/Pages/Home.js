@@ -25,11 +25,7 @@ const Home = () => {
         setName={setName}
         setDateOfBirth={setDateOfBirth}
       />
-      <Button
-        className="button-class"
-        variant="dark"
-        onClick={() => navigate("/userlist")}
-      >
+      <Button variant="dark" onClick={() => navigate("/userlist")}>
         Users
       </Button>
     </div>
