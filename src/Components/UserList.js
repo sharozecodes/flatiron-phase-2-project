@@ -17,7 +17,9 @@ const UserList = () => {
 
   const userElements = users.slice(-5).map((user) => (
     <p key={user.id}>
-      {user.name} , {user.zodiac}
+      <span style={{ fontWeight: "bold" }}>{user.name}</span>, a {user.zodiac}{" "}
+      born on the {new Date(user.dateOfBirth).getDate()} of{" "}
+      {new Date(user.dateOfBirth).toLocaleString("default", { month: "long" })}.
     </p>
   ));
 
@@ -37,8 +39,8 @@ const UserList = () => {
   };
 
   return (
-    <div className="text-white">
-      <h2>USER LIST</h2>
+    <div id="users" className="text-white text-center">
+      <h2>Most Recent Users</h2>
       <>{userElements}</>
       <Button
         className="button-class"
