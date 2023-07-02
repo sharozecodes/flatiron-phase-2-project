@@ -19,9 +19,9 @@ function Horoscope() {
   }, []);
 
   return (
-    <div className="text-white">
+    <div id="horoscope">
       <h2>{zodiacSign} Today</h2>
-      <p style={{ fontSize: "18px" }}>{horoscope}</p>
+      <p>{horoscope}</p>
       <Button
         className="button-class"
         variant="dark"

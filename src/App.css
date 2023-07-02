@@ -6,8 +6,9 @@ body {
   color: black;
 }
 
-.app {
+#app {
   background-color: black;
+  text-align: center;
 }
 
 #zodiac-images {
@@ -27,4 +28,10 @@ h2 {
 
 #form {
   margin-bottom: 10px;
+}
+
+#horoscope {
+  font-size: 18px;
+  text-align: center;
+  color: white;
 }
