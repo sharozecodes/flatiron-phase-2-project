@@ -28,7 +28,6 @@ const Home = () => {
       <Button
         className="button-class"
         variant="dark"
-        className="center"
         onClick={() => navigate("/userlist")}
       >
         Users
