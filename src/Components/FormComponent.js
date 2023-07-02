@@ -75,7 +75,7 @@ const FormComponent = ({ name, dateOfBirth, setName, setDateOfBirth }) => {
 
   return (
     <div id="form">
-      <h2 className="text-white">User Information</h2>
+      <h3 className="text-white">User Information</h3>
       <form className="text-white" onSubmit={handleSubmit}>
         <div className="form-element">
           <label>
