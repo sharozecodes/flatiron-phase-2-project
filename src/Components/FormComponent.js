@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { Button, Stack } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 const FormComponent = ({ name, dateOfBirth, setName, setDateOfBirth }) => {
   const navigate = useNavigate();
