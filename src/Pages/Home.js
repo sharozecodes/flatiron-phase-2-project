@@ -11,7 +11,14 @@ const Home = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <h2 className="text-white">Welcome to Zodiac Horoscope Explorer</h2>
+      <img
+        class="img-fluid rounded-circle"
+        src="https://facts.net/wp-content/uploads/2022/01/Zodiac-signs-inside-of-horoscope-circle.jpg"
+        alt="Zodiac Signs"
+      />
+      <h2 className="text-white center-align">
+        Welcome to Zodiac Horoscope Explorer
+      </h2>
       <FormComponent
         name={name}
         dateOfBirth={dateOfBirth}
