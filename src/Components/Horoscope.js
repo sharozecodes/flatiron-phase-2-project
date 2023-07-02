@@ -29,6 +29,13 @@ function Horoscope() {
       >
         Back
       </Button>
+      <Button
+        className="button-class"
+        variant="dark"
+        onClick={() => navigate("/")}
+      >
+        Home
+      </Button>
     </div>
   );
 }
