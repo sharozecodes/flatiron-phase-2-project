@@ -5,7 +5,7 @@ import FormComponent from "../Components/FormComponent";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Row, Col } from "react-bootstrap";
 const Home = () => {
-  const [zodiac, setZodiac] = useState("Taurus");
+  //const [zodiac, setZodiac] = useState("Taurus");
   const [name, setName] = useState("");
   const [dateOfBirth, setDateOfBirth] = useState("");
   const navigate = useNavigate();
